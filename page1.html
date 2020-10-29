@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.jsdelivr.net/npm/vue">
+</script>
+<head>
+	<!-- <style type="text/css">
+		
+	</style> -->
+	<meta charset="utf-8">
+  <meta name= "viewport" content="width=device-width">
+  <meta name= "description" content="internship Assignment">
+  <meta name= "keywords" content="web design , coding, programming">
+  <meta name= "author" content="Mohd Daud Rehman">
+  <title>Code challenge</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<!-- <canvas id="myCanvas" width="200" height="100" style="border: 1px solid #000000"></canvas> -->
+	<header>
+<div class="container">
+	<div id="topElement">
+		<h1>CodeChallenge</h1>
+	</div>
+	<nav>
+		<ul>
+			<li>HOME</li>
+			<li>ABOUT</li>
+			<li>SERVICES</li>
+		</ul>
+	</nav>
+</div>
+</header>
+<div class ="dashboard">
+	<div id="dashElemnt">
+		<h1>Dashboard</h1>
+	</div>
+</div>
+
+
+<section id="showcase">
+  <div class="container">
+    <table id="firstTable">
+    	<thead>
+    		<tr>
+    			<th>S.NO</th>
+    			<th>PROBLEM</th>
+    			<th>RESULT</th>
+    			<th>TIME TAKEN</th>
+    			<th>MEMORY TAKEN</th>
+    			<th>SUBMISSION</th>
+    		</tr>	
+    	</thead>
+    	<tbody>
+    		<tr v-for="row in rows">
+    			<td>{{row.sno}}</td>
+    			<td>{{row.problem}}</td>
+    			<td>{{row.result}}</td>
+    			<td>{{row.time}}</td>
+    			<td>{{row.mem}}</td>
+    			<td><button v-on:click=callpage(row.sno) >
+                        View 
+                        </button></td>
+
+    		</tr>
+    	</tbody>
+    </table>
+  </div>
+</section>
+
+
+
+<footer>
+  <p>coding coding coding and only coding</p>
+</footer>
+
+
+<script>
+var counter=1;
+var obj = new Vue({
+	el:'#firstTable'
+	,
+	data:{
+		rows:[{sno:counter++,problem:'Decreasing Srrnmieeda',result:'correct',time:'0.73',mem:'2197 M'},
+	{sno:counter++,problem:'POSAND',result:'wrong',time:'0.2',mem:'1000 M'},
+
+		{sno:counter++,problem:'Covid 19',result:'correct',time:'0.49',mem:'2301 M'}]
+	}
+})	
+
+function callpage(cvv)
+	{
+		if(cvv==1)
+		window.location.href="editiorPage.html"
+		if(cvv ==2)
+			window.location.href="editiorpage2.html"
+		if(cvv ==3)
+			window.location.href="editiorpage3.html"
+	}
+</script>
+</body>

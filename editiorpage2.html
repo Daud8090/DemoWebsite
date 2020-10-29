@@ -1,0 +1,90 @@
+<!DOCTYPE>
+<html>
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue">
+</script> -->
+<head>
+	<!-- <style type="text/css">
+		
+	</style> -->
+	<meta charset="utf-8">
+  <meta name= "viewport" content="width=device-width">
+  <meta name= "description" content="internship Assignment">
+  <meta name= "keywords" content="web design , coding, programming">
+  <meta name= "author" content="Mohd Daud Rehman">
+  <title>submission page</title>
+  <link rel="stylesheet" href="./css/style2.css">
+</head>
+
+<body>
+<header>
+<h1>Wrong Solution  |  Problem : POSAND</h1>
+<h2>
+public class Main {</br>
+	public static void main(String[] args) throws IOException
+	{</br>
+	    List<Integer> answers[] = new ArrayList[100000];</br>
+		InputStream inputStream = System.in;</br>
+		
+
+		InputReader in = new InputReader(inputStream);</br>
+		 
+        int arr[]=new int[100001];</br>
+        arr[1]=1;
+        arr[2]=3;
+        arr[3]=2;
+        int count=4;</br>
+        for(int i=4;i<100000;i++)</br>
+		       {
+		           if(i%2==0){</br>
+		           boolean fz=power(i);</br>
+		           if(fz==true){</br>
+		           arr[i]=count+1;</br>
+		           arr[i+1]=count;</br>
+		           i++;
+		           count=count+2;</br>
+		           }</br>
+		           else{</br>
+		          arr[i]=count;//  System.out.print(i+" ");</br>
+		           count=count+1;</br>
+		               
+		           }
+		           }</br>
+		           else</br>
+		           {
+		              arr[i]=count;//System.out.print(i+" "); </br>
+		              count=count+1;</br>
+		           }
+		       }
+		int t = in.nextInt();</br>
+		while(t--!=0)</br>
+		{
+		   int n=in.nextInt();</br>
+		  boolean p=power(n);</br>
+		   if(n==1)
+		   System.out.println("1");</br>
+		   else if(p==true)
+		   {
+		       System.out.println("-1");</br>
+		   }
+		   else
+		   {</br>
+		       
+		       for(int i=1;i<=n;i++)</br>
+		       {
+		           System.out.print(arr[i]+" ");</br>
+		       }
+		       System.out.println();</br>
+		       
+		   }</br>
+		    
+		}
+	}
+</h2>
+</header>
+
+</body>
+<script>
+	
+	
+	</script>
+</html>
